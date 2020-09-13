@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { storeUserData } from '../../../stores/auth/auth.actions'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import HomeScreen from '../../screens/HomeScreen';
@@ -13,12 +15,33 @@ import MyPropagationIcon from '../../shared/icons/leaf-outline.svg';
 import WishListIcon from '../../shared/icons/heart-outline.svg';
 import MyAccountIcon from '../../shared/icons/person-outline.svg';
 
+import auth from '@react-native-firebase/auth';
+
 const Tab = createBottomTabNavigator();
 
-function MainNavigator({ auth }) {
+function MainNavigator({ authData, storeUserData, navigation }) {
+  // Set an initializing state whilst Firebase connects
+  const [initializing, setInitializing] = useState(true);
+
+  // Handle user state changes
+  function onAuthStateChanged(user) {
+    if (user) {
+      const { email, uid, photoURL } = user;
+      storeUserData({ email, uid, photoURL })
+    }
+    if (initializing) setInitializing(false);
+  }
+
+  useEffect(() => {
+    const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
+    return subscriber; // unsubscribe on unmount
+  }, []);
+
+  if (initializing) return null;
+
   const onlyWhenLoggedIn = ({ navigation }) => ({
     tabPress: (e) => {
-      if (auth.user == null) {
+      if (authData.user == null) {
         e.preventDefault();
         navigation.navigate('LogIn');
       }
@@ -81,8 +104,13 @@ function MainNavigator({ auth }) {
 }
 
 const mapStateToProps = (state) => {
-  const { auth } = state;
-  return { auth };
+  return { ...state };
 };
 
-export default connect(mapStateToProps)(MainNavigator);
+const mapDispatchToProps = dispatch => (
+  bindActionCreators({
+    storeUserData,
+  }, dispatch)
+);
+
+export default connect(mapStateToProps, mapDispatchToProps)(MainNavigator);
