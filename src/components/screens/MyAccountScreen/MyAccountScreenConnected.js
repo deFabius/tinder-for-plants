@@ -1,10 +1,16 @@
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import MyAccountScreen from './MyAccountScreen';
+import { logout } from '../../../stores/auth/auth.thunks'
 
 const mapStateToProps = (state) => {
-  console.log(state);
-  const {auth} = state;
-  return {auth};
+  const { user } = state;
+  return { user };
 };
 
-export default connect(mapStateToProps)(MyAccountScreen);
+const mapDispatchToProps = (dispatch, { navigation }) => {
+  return {
+    logout: () => dispatch(logout(navigation))
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(MyAccountScreen);
