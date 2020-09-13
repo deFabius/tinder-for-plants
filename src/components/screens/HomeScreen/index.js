@@ -2,8 +2,6 @@ import * as React from 'react';
 import {SafeAreaView, ScrollView, View, Text, StatusBar} from 'react-native';
 import styles from '../../shared/styles';
 
-import DemoPage from '../DemoPage';
-
 function HomeScreen() {
   return (
     <>
@@ -17,7 +15,6 @@ function HomeScreen() {
               <Text style={styles.sectionTitle}>Home page</Text>
             </View>
           </View>
-          <DemoPage />
         </ScrollView>
       </SafeAreaView>
     </>
