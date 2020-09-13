@@ -1,4 +1,4 @@
-package com.tinderforplants;
+package com.titanotechltd.tinderforplants;
 
 import com.facebook.react.ReactActivity;
 

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1050884104964-q57bvdkq1as1ln8h8e0tp1g8p6poutl9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1050884104964-q57bvdkq1as1ln8h8e0tp1g8p6poutl9</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>1050884104964-46mmjbrek6dej5mb39d2g4qkgd7ik32i.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBpYm_t0E7-HaxXi2unXtqFjABqHqKhAvo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1050884104964</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.titanotechltd.TinderForPlants</string>
+	<key>PROJECT_ID</key>
+	<string>tinder-for-plants</string>
+	<key>STORAGE_BUCKET</key>
+	<string>tinder-for-plants.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1050884104964:ios:a2370837322d14cc28e651</string>
+	<key>DATABASE_URL</key>
+	<string>https://tinder-for-plants.firebaseio.com</string>
+</dict>
+</plist>

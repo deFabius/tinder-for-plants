@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1050884104964",
+    "firebase_url": "https://tinder-for-plants.firebaseio.com",
+    "project_id": "tinder-for-plants",
+    "storage_bucket": "tinder-for-plants.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1050884104964:android:35fc6ebe397cfb7e28e651",
+        "android_client_info": {
+          "package_name": "com.titanotechltd.tinderforplants"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1050884104964-46mmjbrek6dej5mb39d2g4qkgd7ik32i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.titanotechltd.tinderforplants",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "1050884104964-nfvde997ge6v0s9oli7hek51uu15gdsv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFomhSDvkm2hPN032vfgxklejLl-NzkC4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1050884104964-nfvde997ge6v0s9oli7hek51uu15gdsv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
