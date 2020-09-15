@@ -1,4 +1,7 @@
 import React from 'react';
+import firestore from '@react-native-firebase/firestore';
+
+
 import {
   SafeAreaView,
   ScrollView,
@@ -10,7 +13,11 @@ import {
 import styles from '../../shared/styles';
 
 
-function MyAccountScreen({ logout }) {
+function MyAccountScreen({ logout, getUserData }) {
+  const userDocument = firestore()
+    .collection('Users')
+
+  getUserData();
 
   return (
     <>

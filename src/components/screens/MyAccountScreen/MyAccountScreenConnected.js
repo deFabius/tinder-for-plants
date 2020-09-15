@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import MyAccountScreen from './MyAccountScreen';
-import { logout } from '../../../stores/auth/auth.thunks'
+import { logout, getUserData } from '../../../stores/auth/auth.thunks'
 
 const mapStateToProps = (state) => {
   const { user } = state;
@@ -9,7 +9,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch, { navigation }) => {
   return {
-    logout: () => dispatch(logout(navigation))
+    logout: () => dispatch(logout(navigation)),
+    getUserData: () => dispatch(getUserData())
   }
 };
 
