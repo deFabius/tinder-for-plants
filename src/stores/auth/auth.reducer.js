@@ -1,4 +1,4 @@
-import * as TYPES from './auth.types'
+import * as TYPES from './auth.types';
 
 const INITIAL_STATE = {
   user: null,
@@ -7,10 +7,11 @@ const INITIAL_STATE = {
 const authReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case TYPES.STORE_USER_DATA:
+      console.log('action', action);
       return {
         ...state,
-        user: action.payload
-      }
+        user: action.payload,
+      };
     default:
       return state;
   }
